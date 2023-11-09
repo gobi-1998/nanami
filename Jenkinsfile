@@ -1,7 +1,17 @@
 pipeline {
     agent any
 
+    
+        
+
     stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+    
         stage('Terraform Init') {
             steps {
                 // Navigate to the directory where your Terraform script is located
